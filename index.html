@@ -48,9 +48,8 @@
                 </ul>
             </div>
         </section>
-        <section class="hero" id="hero">
-            <!-- <h1>Impulsamos el futuro con soluciones de energía sostenible.</h1> -->
-             <h1>Aplicamos investigación y desarrollo de vanguardia en ingeniería y tecnología.</h1>
+        <section class="hero in" id="bg-hero">
+             <h1 id="text-hero">Aplicamos investigación y desarrollo de vanguardia en ingeniería y tecnología.</h1>
             <button class="btn-action" type="button">
                 Solicita una evaluación
             </button>
@@ -205,18 +204,23 @@
 </html>
 
 <script>
-    const images = [
-        '/utils/images/hero-1.jpg',
-        '/utils/images/hero-2.jpg',
+    const background = [
+        {imagen: '/utils/images/hero-1.jpg', font_size: '7vh', texto: 'Impulsamos el futuro con soluciones de energía sostenible.'},
+        {imagen: '/utils/images/hero-2.jpg', font_size: '7vh', texto: 'Aplicamos investigación y desarrollo de vanguardia en ingeniería y tecnología.'},
+        {imagen: '/utils/images/hero-3.jpg', font_size: '7vh', texto: 'Ofrecemos servicios de consultoría y asesoramiento en planificación eléctrica.'},
+        {imagen: '/utils/images/hero-4.jpg', font_size: '5vh', texto: 'Desarrollamos proyectos de infraestructura eléctrica e implementamos proyectos de eficiencia energética para un mundo más verde y sostenible.'},
     ];
 
-    let current = 0;
+    let current = 1;
     function changeBackgroundImage() {
-        const element = document.getElementById('hero');
-        element.style.backgroundImage = `url('${images[current]}')`;
-        current = (current + 1) % images.length;
+        const bg = document.getElementById('bg-hero');
+        const text = document.getElementById('text-hero');
+        bg.style.backgroundImage = `url('${background[current].imagen}')`;
+        text.innerHTML = background[current].texto;
+        bg.style.font.size = `('${background[current].font_size}')`;
+        current = (current + 1) % background.length;
     }
-    setInterval(changeBackgroundImage, 1000);
+    setInterval(changeBackgroundImage, 5000);
 </script>
 
 <style>
@@ -298,14 +302,36 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        /* box-shadow: inset 0 18vh 70px -3vh rgb(0 0 0 / 30%); */
-        box-shadow: inset 0 100vh 0 0vh rgb(0 0 0 / 50%);
+        box-shadow: inset 0 100vh 0 0vh rgb(0 0 0 / 60%);
         overflow-x: hidden;
+        /* opacity: 0; */
+        /* animation: bg-in 2s ease-in-out forwards, bg-out 2s ease-in-out forwards;
+        animation-delay: 0s, 2s; */
+    }
+
+    @keyframes bg-in {
+        0% {
+           opacity: 0; 
+        }
+
+        100% {
+           opacity: 1; 
+        }
+    }
+
+    @keyframes bg-out {
+        0% {
+           opacity: 1; 
+        }
+
+        100% {
+           opacity: 0; 
+        }
     }
 
     .hero h1 {
         color: var(--white);
-        font-size: 8vh;
+        font-size: 7vh;
         position: relative;
         top: 25vh;  
         width: 50vw;
@@ -319,7 +345,7 @@
         background-color: var(--dark-green);
         color: var(--white);
         border: none;
-        font-size: 3vh;
+        font-size: 2.5vh;
         font-weight: 500;
         width: 20vw;
         height: 8vh;
