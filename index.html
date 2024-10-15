@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     </head>
     <body>
         <section class="header">
@@ -35,21 +36,23 @@
                     <li>Servicios</li>
                     <li>Proyectos</li>
                     <li>Contactanos</li>
-                    <li style="display: flex;">
+                    <li style="display: flex;" class="lg-select">
                         <div class="language"></div>
                         <i class="fa-solid fa-caret-down"></i>
-                        <!-- <div class="language-menu">
-                            <ul>
-                                <li>Español</li>
-                                <li>Ingles</li>
-                            </ul>
-                        </div> -->
+                        <div class="language-menu">
+                            <nav>
+                                <ul>
+                                    <li><div class="esp"></div>Español</li>
+                                    <li><div class="eng"></div>English</li>
+                                </ul>
+                            </nav>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="hero in" id="bg-hero">
-             <h1 id="text-hero">Aplicamos investigación y desarrollo de vanguardia en ingeniería y tecnología.</h1>
+        <section class="hero">
+            <h1 class="title">Impulsamos el futuro con soluciones de energía sostenible.</h1>
             <button class="btn-action" type="button">
                 Solicita una evaluación
             </button>
@@ -60,167 +63,63 @@
                 Desarrollamos soluciones eléctricas inteligentes para garantizar 
                 un suministro energético confiable, eficiente 
                 y respetuoso con el medio ambiente.💡
-                <div class="footer-container">
+                <button class="footer-container">
                     Conoce más
                     <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </section>
-        <!-- <section class="hero">
-            <div class="hero-main">
-                <div class="hero-text-primary">
-                    Optimiza tu consumo energético y maximiza tus ahorros
-                </div>
-                <button class="hero-btn-accion" type="button">
-                    Solicita una evaluación
                 </button>
-                <div class="hero-text-secondary">
-                    En ASER, ayudamos a empresas a reducir sus costos eléctricos 
-                    mediante soluciones avanzadas de auditoría y optimización energética. 
-                    Identificamos oportunidades clave para mejorar la eficiencia de tus 
-                    instalaciones, garantizando un uso inteligente y rentable de la energía.
-                    <div class="footer-text-secondary">
-                        Conoce más
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
             </div>
         </section>
-        <section class="about">
-            <div class="about-left">
-                <div class="titulo">
-                    Aser Consultores
-                </div>
-                <div class="subtitulo">
-                    Aser Consultores
-                </div>
-                <div class="texto">
-                    Aser es una empresa familiar compuesta por los ingenieros Juan Pablo Palacios, Marcelo Palacios Santana, y Marcelo Favio Palacios. Su objetivo es hacer más rentable el uso de la energía eléctrica que sus clientes pagan por medio de la optimización técnica en sus instalaciones y equipos eléctricos, evitando trampas comunes como el desconocimiento de la calidad de la energía consumida (inventario y auditoría energética). Para ello utilizan electrotécnica avanzada y equipos de alta tecnología.
-                </div>
-                <div class="botones">
-                    <button class="btn-lg primary" type="button">Aceptar</button>
-                    <button class="btn-md primary" type="button">Aceptar</button>
-                    <button class="btn-sm primary" type="button">Aceptar</button>
-                </div>
-                <div class="botones">
-                    <button class="btn-lg secondary" type="button">Aceptar</button>
-                    <button class="btn-md secondary" type="button">Aceptar</button>
-                    <button class="btn-sm secondary" type="button">Aceptar</button>
-                </div>
-                <div class="botones">
-                    <button class="btn-lg tertiary" type="button">Aceptar</button>
-                    <button class="btn-md tertiary" type="button">Aceptar</button>
-                    <button class="btn-sm tertiary" type="button">Aceptar</button>
-                </div>
-                <div class="carrusel-group">
-                    <div class="carrusel">
-                    </div>
-                    <div class="carrusel-footer">
-                        <div class="carrusel-item">
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                        </div>
-                        <div class="carrusel-control">
-                            <div class="item"><i class="fa-solid fa-angle-left"></i></div>
-                            <div class="item"><i class="fa-solid fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-right">
-                <div class="card">
-                    <div class="card-img">
+        <section class="nosotros">
 
-                    </div>
-                    <div class="card-title">
-                        Titulo del servicio
-                    </div>
-                    <div class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
-                    </div>
-                    <button class="btn-md primary card-btn" type="button">
-                        Conoce más
-                    </button>
-                </div>
-                <div class="card-group">
-                    <div class="card-sm primary">
-                        <div class="icon">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <div class="group-text">
-                            <div class="title">
-                                Titulo
-                            </div>
-                            <div class="text">
-                                Descripcion de la carta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-sm secondary">
-                        <div class="icon">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <div class="group-text">
-                            <div class="title">
-                                Titulo
-                            </div>
-                            <div class="text">
-                                Descripcion de la carta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-sm tertiary">
-                        <div class="icon">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <div class="group-text">
-                            <div class="title">
-                                Titulo
-                            </div>
-                            <div class="text">
-                                Descripcion de la carta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-sm quaternary">
-                        <div class="icon">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <div class="group-text">
-                            <div class="title">
-                                Titulo
-                            </div>
-                            <div class="text">
-                                Descripcion de la carta
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+        </section>
     </body>
 </html>
 
 <script>
-    const background = [
+    const options = [
         {imagen: '/utils/images/hero-1.jpg', font_size: '7vh', texto: 'Impulsamos el futuro con soluciones de energía sostenible.'},
         {imagen: '/utils/images/hero-2.jpg', font_size: '7vh', texto: 'Aplicamos investigación y desarrollo de vanguardia en ingeniería y tecnología.'},
         {imagen: '/utils/images/hero-3.jpg', font_size: '7vh', texto: 'Ofrecemos servicios de consultoría y asesoramiento en planificación eléctrica.'},
-        {imagen: '/utils/images/hero-4.jpg', font_size: '5vh', texto: 'Desarrollamos proyectos de infraestructura eléctrica e implementamos proyectos de eficiencia energética para un mundo más verde y sostenible.'},
+        {imagen: '/utils/images/hero-4.jpg', font_size: '4.8vh', texto: 'Desarrollamos proyectos de infraestructura eléctrica e implementamos proyectos de eficiencia energética para un mundo más verde y sostenible.'},
     ];
 
     let current = 1;
     function changeBackgroundImage() {
-        const bg = document.getElementById('bg-hero');
-        const text = document.getElementById('text-hero');
-        bg.style.backgroundImage = `url('${background[current].imagen}')`;
-        text.innerHTML = background[current].texto;
-        bg.style.font.size = `('${background[current].font_size}')`;
-        current = (current + 1) % background.length;
+        const background = $('.hero');
+        const title = $('.hero .title');
+        background.css('background-image', `url('${options[current].imagen}')`);
+        title.html(options[current].texto);
+        title.css('font-size', options[current].font_size);
+        current = (current + 1) % options.length;
+        background.addClass('translate');
     }
     setInterval(changeBackgroundImage, 5000);
+
+    $('.lg-select').on('click', function() {
+        if($('.language-menu').is(':visible')) {
+            $('.language-menu').hide();
+        } else {
+            $('.language-menu').show();
+        }
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const hero = document.querySelector('.hero');
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $('.header').css('opacity');
+            } else {
+                $('.header').addClass("visible");
+            }
+        });
+    }, options);
+    observer.observe(hero);
+});
 </script>
 
 <style>
@@ -237,6 +136,7 @@
     body {
         margin: 0;
         font-family: "Montserrat", sans-serif;
+        overflow-x: hidden;
     }
 
     .header {
@@ -247,10 +147,11 @@
         display: flex;
         justify-content: space-between;
         padding: 2vh 0;
+        align-items: center;
     }
     
     .header .logo {
-        margin: 0 3vw;
+        margin: 0 1vw;
         text-align: center;
         padding: 1.5vh 2.5vw;
         border-radius: 1vh;
@@ -266,6 +167,11 @@
         margin: 0;
         color: var(--white);
         font-size: 1.8vh;
+    }
+
+    .header .menu {
+        margin-right: 1vw;
+        height: fit-content;
     }
 
     .header .menu ul {
@@ -284,6 +190,11 @@
         cursor: pointer;
     }
 
+    .header .menu ul li.active {
+        color: var(--orange);
+        font-weight: 800;
+    }
+
     .header .menu ul li .language {
         background-image: url('utils/images/lg-espanol.jpg');
         background-size: cover;
@@ -295,6 +206,48 @@
         margin-right: 0.5vw;
     }
 
+    .language-menu {
+        display: none;
+        position: absolute;
+        top: 10.5vh;
+        right: 2vw;
+        background-color: var(--gray);
+        border-radius: 1.5vh;
+        overflow: hidden;
+    }
+
+    .language-menu nav ul {
+        flex-direction: column;
+    }
+
+    .language-menu nav ul li {
+        font-size: 2.2vh !important;
+        display: flex;
+    }
+
+    .language-menu nav ul li:hover {
+        background-color: var(--light-green);
+    }
+
+    .language-menu nav ul .esp,
+    .language-menu nav ul .eng {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 3.5vh;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        margin-right: 0.5vw;
+    }
+    
+    .language-menu nav ul .esp {
+        background-image: url('utils/images/lg-espanol.jpg');
+    }
+
+    .language-menu nav ul .eng {
+        background-image: url('utils/images/lg-english.png');
+    }
+
     .hero {
         height: 100vh;
         width: 100vw;
@@ -304,29 +257,21 @@
         background-repeat: no-repeat;
         box-shadow: inset 0 100vh 0 0vh rgb(0 0 0 / 60%);
         overflow-x: hidden;
-        /* opacity: 0; */
-        /* animation: bg-in 2s ease-in-out forwards, bg-out 2s ease-in-out forwards;
-        animation-delay: 0s, 2s; */
     }
 
-    @keyframes bg-in {
-        0% {
-           opacity: 0; 
-        }
-
-        100% {
-           opacity: 1; 
-        }
+    .hero .carousel {
+        display: flex;
+        position: absolute;
+        height: 100vh;
+        width: 400vw;
+        transition: transform 1s ease;
     }
 
-    @keyframes bg-out {
-        0% {
-           opacity: 1; 
-        }
-
-        100% {
-           opacity: 0; 
-        }
+    .hero .carousel .item {
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
     }
 
     .hero h1 {
@@ -350,6 +295,13 @@
         width: 20vw;
         height: 8vh;
         border-radius: 1vh;
+        cursor: pointer;
+        transition: all 0.1s ease;
+    }
+
+    .hero .btn-action:hover {
+        transform: scale(1.05);
+        background-color: var(--light-green);
     }
 
     .hero .text-container {
@@ -377,318 +329,35 @@
         text-align: right;
         font-size: 2.5vh;
         cursor: pointer;
-    }
-
-    /* .header {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    .header-menu ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-    }
-
-    .header-menu ul li {
-        background-color: transparent;
-        padding: 5px 12px;
-        color: white;
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    .header-menu ul li.active {
-        color: #499b60;
-    }
-
-    .header-menu ul li.active::after {
-        display: block;
-        position: relative;
-        content: '';
-        background-color: #499b60;
-        width: 100%;
-        height: 8px;
-        top: 5px;
-    }
-
-    .hero-text-primary {
-        color: white;
-        font-size: 55px;
-        font-weight: 800;
-        width: 50%;
-        position: absolute;
-        top: 30vh;
-        left: 3vw;
-    }
-
-    .hero-btn-accion {
-        background-color: #004f38;
-        color: white;
         border: none;
-        font-size: 18px;
-        padding: 18px 40px;
-        position: absolute;
-        top: 68vh;
-        left: 3vw;
-        border-radius: 8px;
+        color: var(--white);
     }
 
-    .hero-text-secondary {
-        position: absolute;
-        bottom: 12vh;
-        right: 5vw;
-        width: 25%;
-        color: white;
-        padding: 40px 35px 45px 40px;
-        background: #6f6e6e47;
-        backdrop-filter: blur(5px);
-        border-radius: 8px;
-    }
-    
-    .footer-text-secondary {
-        background-color: #004f38;
-        position: absolute;
-        bottom: -50px;
-        left: 0;
-        width: -webkit-fill-available;
-        padding: 20px 25px;
-        text-align: right;
-        font-size: 18px;
+    .hero .footer-container:hover {
+        text-decoration: underline;
     }
 
-    i {
-        margin-left: 10px;
+    .hero .footer-container:hover i {
+        animation: vertical-jump 0.5s linear infinite;
     }
 
-    .cbo-lg {
-        background-image: url('utils/images/lg-espanol.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
+    .nosotros {
+        width: 100vw;    
+        min-height: 100vh;
+        background-color: #ddd;
     }
 
-    .header-logo {
-        padding: 14px 35px;
-    }
+    @keyframes vertical-jump {
+        0% {
+            transform: translateX(0vw);
+        }
 
-    .header-text-logo {
-        color: white;
-        font-size: 25px;
-        font-weight: 700;
-        top: 80px;
-        left: 68px;
-        position: absolute;
-    }
+        50% {
+            transform: translateX(0.5vw);
+        }
 
-    .about {
-        width: 100wv;
-        height: auto;
-        background-color: #e8e8e8;
-        overflow-x: hidden;
-        padding: 25px;
-        display: flex;
+        100% {
+            transform: translateX(0vw);
+        }
     }
-
-    .about-left {
-        width: 50%;
-        padding: 25px;
-    }
-
-    .about-right {
-        width: 50%;
-        padding: 25px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .titulo {
-        font-size: 45px;
-        color: #004f38;
-        font-weight: 800;
-        margin-bottom: 20px;
-    }
-
-    .subtitulo {
-        font-size: 25px;
-        color: #499b60;
-        font-weight: 600;
-        margin-bottom: 25px;
-    }
-
-    .texto {
-        color: #4e5a6c;
-        margin-bottom: 25px;
-    }
-
-    .botones {
-        margin-top: 20px;
-    }
-
-    .btn-lg {
-        border: none;
-        font-size: 20px;
-        padding: 12px 40px;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-    
-    .btn-md {
-        border: none;
-        font-size: 15px;
-        padding: 12px 30px;
-        border-radius: 8px
-    }
-
-    .btn-sm {
-        border: none;
-        font-size: 12px;
-        padding: 10px 25px;
-        border-radius: 8px
-    }
-
-    .primary {
-        background-color: #004f38;
-        color: white;
-    }
-
-    .secondary {
-        background-color: #499b60;
-        color: white;
-    }
-
-    .tertiary {
-        background-color: #4e5a6c;
-        color: white;
-    }
-
-    .quaternary {
-        background-color: #f79b39;
-        color: white;
-    }
-
-    .card {
-        width: 300px;
-        height: 350px;
-        background-color: white;
-        border-radius: 10px;
-        padding: 18px 24px;
-    }
-
-    .card-img {
-        background-color: #004f38;
-        width: 300px;
-        height: 180px;
-        border-radius: 10px;
-        position: relative;
-        top: -40px;
-        box-shadow: 0px 9px 29px 10px rgba(0,0,0,0.13);
-    }
-
-    .card-title {
-        color: #4e5a6c;
-        font-size: 19px;
-        font-weight: 600;
-        margin-bottom: 15px;
-    }
-
-    .card-text {
-        color: #4e5a6c;
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
-
-    .card-btn {
-        position: relative;
-        bottom: -10%;
-    }
-
-    .card-group {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 25px 0;
-    }
-
-    .card-sm {
-        width: 250px;
-        height: 90px;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        margin: 2px;
-    }
-
-    .card-sm .icon {
-        font-size: 45px;
-        margin-right: 25px;
-    }
-
-    .card-sm .title {
-        font-weight: 700;
-        font-size: 17px;
-    }
-
-    .card-sm .text {
-        font-size: 14px;
-    }
-
-    .carrusel-group {
-        margin: 25px 0;
-    }
-
-    .carrusel {
-        background-image: url('utils/images/img-example.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 600px;
-        height: 250px;
-        border-radius: 10px;
-    }
-
-    .carrusel-footer {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .carrusel-item {
-        margin-top: 10px;
-        display: flex;
-        width: fit-content;
-    }
-
-    .carrusel-item .item {
-        background-color: #4e5a6c;
-        width: 10px;
-        height: 10px;
-        margin: 0 5px;
-        border-radius: 50%;
-    }
-
-    .carrusel-control {
-        margin-top: 5px;
-        display: flex;
-        width: fit-content;
-    }
-
-    .carrusel-control .item {
-        background-color: #4e5a6c;
-        width: 25px;
-        height: 25px;
-        margin: 0 5px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-
-    .carrusel-control .item i {
-        margin-left: 0;
-    } */
 </style>
