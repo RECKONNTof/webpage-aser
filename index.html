@@ -75,9 +75,51 @@
                 Brindamos servicios de asesoría y consultoría en tópicos relevantes de la transición energética y economía energética. 
             </div>
             <div class="detail">
-                <div class="item" style="background-image: url('utils/images/mision.jpg');"></div>
-                <div class="item" style="background-image: url('utils/images/mision.jpg');"></div>
-                <div class="item" style="background-image: url('utils/images/mision.jpg');"></div>
+                <div class="item">
+                    <div class="image" style="background-image: url('utils/images/mision.jpg');">MISIÓN</div>
+                    <div class="description" style="font-size: 2.5vh; background-color: var(--gray);">
+                        Proporcionar a nuestros clientes servicios de la mayor calidad en investigación, 
+                        desarrollo, innovación y consultoría en el sector de la energía eléctrica, con altos valores de ética y compromiso social.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url('utils/images/vision.jpg');">VISIÓN</div>
+                    <div class="description" style="font-size: 2.5vh; background-color: var(--light-green);">
+                        Posicionarnos como una empresa líder en investigación, desarrollo, innovación y consultoría en el sector de la energía eléctrica.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url('utils/images/valores.jpg');">VALORES</div>
+                    <div class="description" style="font-size: 2.5vh; background-color: var(--dark-green);">
+                        Creemos en el conocimiento como motor para transformar la sociedad, mejorando la calidad de vida a través de proyectos de infraestructura 
+                        en energía eléctrica, basados en ética profesional, responsabilidad y compromiso social y ambiental
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="productos">
+            <div>
+                <h2>NUESTROS SERVICIOS</h2>
+            </div>
+            <div class="detail">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('utils/images/estudios-electricos.jpg');"></div>
+                    <div class="card-title">
+                        Estudios Eléctricos
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url('utils/images/energias-renovables.jpg');"></div>
+                    <div class="card-title">
+                        Energías Renovables
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url('utils/images/lineas-transmision.jpg');"></div>
+                    <div class="card-title">
+                        Líneas de Transición y Subestaciones
+                    </div>
+                </div>
             </div>
         </section>
     </body>
@@ -139,9 +181,11 @@
         --white: #ffffff; 
         --dark-green: #004f38; 
         --light-green: #499b60; 
-        --gray: #4e5a6c; 
+        --gray: #98a0ab; 
         --black: #000000;
         --orange: #f79b39;
+        --light-blue: #257699;
+        --dark-blue: #385dd2;
     }
     
     body {
@@ -359,10 +403,10 @@
         width: 100vw;    
         min-height: 100vh;
         background-color: var(--white);
-        padding: 3vh 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 5vh;
     }
 
     .nosotros .presentation {
@@ -372,21 +416,96 @@
         height: fit-content;
         text-align: center;
         font-weight: 900;
-        padding: 5vh 0;
+        padding: 12vh 0;
     }
 
     .nosotros .detail {
         width: 95vw;
-        height: 50vh;
-        background-color: #000000;
         display: flex;
     }
 
     .nosotros .detail .item {
         width: 35%;
+        border: 0.2vw solid white;
+    }
+
+    .nosotros .detail .item .image {
+        width: 100%;
+        height: 70vh;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        color: var(--white);
+        writing-mode: vertical-lr;
+        font-size: 12vh;
+        font-weight: 700;
+        text-align: start;
+        line-height: 0.7;
+        box-shadow: inset 0 100vh 0 0vh rgb(0 0 0 / 60%);
+    }
+
+    .nosotros .detail .item .description {
+        background-color: var(--light-green);
+        color: var(--white);
+        height: 30vh;
+        padding: 0 3vw;
+        font-weight: 700;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .productos {
+        width: 100vw;    
+        min-height: 100vh;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos h2 {
+        color: var(--dark-green);
+        font-size: 4vh;
+        font-weight: 900;
+    }
+
+    .productos .detail {
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .productos .detail .card {
+        width: 25vw;
+        height: 50vh;
+        background-color: var(--dark-green);
+        border-radius: 2vh;
+        padding: 2vh 1.2vw;
+        margin: 3vh 2vw;
+    }
+
+    .productos .detail .card .card-image {
+        width: 100%;
+        height: 40vh;
+        border-radius: 2vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 9px 29px 10px rgba(0,0,0,0.13);
+    }
+
+    .productos .detail .card .card-title {
+        color: var(--white);
+        font-size: 3.5vh;
+        font-weight: 700;
+        width: 100%;
+        text-align: left;
+        height: 10vh;
+        display: flex;
+        align-items: center;
     }
 
     @keyframes vertical-jump {
