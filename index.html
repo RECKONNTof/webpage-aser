@@ -290,6 +290,23 @@
             </ul>
         </div>
     </section>
+    <section class="clientes">
+        <div>
+            <h2>CLIENTES QUE CONFÍAN EN NOSOTROS</h2>
+        </div>
+        <div class="detail">
+            <ul>
+                <li style="min-width: 14vw; animation: move-c-1 10s linear infinite;"><img style="height: 10vh;" src="./utils/images/acciona.svg" alt=""></li>
+                <li style="min-width: 10vw; animation: move-c-1 10s linear infinite;"><img style="height: 10vh;" src="./utils/images/ferrero-rocher.png" alt=""></li>
+                <li style="min-width: 10vw; --move: 0vw;"><img style="height: 12vh;" src="./utils/images/lafabril.png" alt=""></li>
+                <li style="min-width: 15vw; --move: 0vw;"><img style="height: 25vh;" src="./utils/images/cnel.jpg" alt=""></li>
+                <li style="min-width: 6vw; --move: 0vw;"><img style="height: 15vh;" src="./utils/images/alcaldia-cuenca.png" alt=""></li>
+                <li style="min-width: 14vw; --move: 0vw;"><img style="height: 12vh;" src="./utils/images/eeq.png" alt=""></li>
+                <li style="min-width: 19vw; --move: 0vw;"><img style="height: 6.5vh;" src="./utils/images/canala.svg" alt=""></li>
+                <li style="min-width: 24vw; --move: 0vw;"><img style="height: 10vh;" src="./utils/images/eec.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>
@@ -705,6 +722,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        animation: right-move 10s linear infinite;
     }
 
     .productos .detail .card:hover .card-option {
@@ -836,6 +854,43 @@
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
+    .clientes {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15vh;
+    }
+
+    .clientes h2 {
+        color: var(--dark-green);
+        font-size: 4vh;
+        font-weight: 900;
+    }
+
+    .clientes .detail {
+        width: 80%;
+        height: 15vh;
+        overflow: hidden;
+        
+    }
+
+    .clientes .detail ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    
+    .clientes .detail ul li {
+        list-style: none;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     @media (min-width: 40rem) {
         .timeline ul {
             grid-template-columns: 1fr var(--line-w) 1fr;
@@ -883,6 +938,16 @@
 
         100% {
             transform: translateX(0vw);
+        }
+    }
+
+    @keyframes move-c-1 {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(80vw);
         }
     }
 </style>
