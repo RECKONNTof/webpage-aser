@@ -294,18 +294,63 @@
         <div>
             <h2>CLIENTES QUE CONFÍAN EN NOSOTROS</h2>
         </div>
-        <div class="detail">
-            <ul>
-                <li style="min-width: 14vw; animation: move-c-1 10s linear infinite;"><img style="height: 10vh;" src="./utils/images/acciona.svg" alt=""></li>
-                <li style="min-width: 10vw; animation: move-c-1 10s linear infinite;"><img style="height: 10vh;" src="./utils/images/ferrero-rocher.png" alt=""></li>
-                <li style="min-width: 10vw; --move: 0vw;"><img style="height: 12vh;" src="./utils/images/lafabril.png" alt=""></li>
-                <li style="min-width: 15vw; --move: 0vw;"><img style="height: 25vh;" src="./utils/images/cnel.jpg" alt=""></li>
-                <li style="min-width: 6vw; --move: 0vw;"><img style="height: 15vh;" src="./utils/images/alcaldia-cuenca.png" alt=""></li>
-                <li style="min-width: 14vw; --move: 0vw;"><img style="height: 12vh;" src="./utils/images/eeq.png" alt=""></li>
-                <li style="min-width: 19vw; --move: 0vw;"><img style="height: 6.5vh;" src="./utils/images/canala.svg" alt=""></li>
-                <li style="min-width: 24vw; --move: 0vw;"><img style="height: 10vh;" src="./utils/images/eec.png" alt=""></li>
-            </ul>
+        <div class="detail-container">
+            <div class="detail" style="--time: 0s">
+                <div class="item" style="min-width: 27vw;">
+                    <img style="height: 10vh;" src="./utils/images/eec.png" alt="">
+                </div>
+                <div class="item" style="min-width: 14vw;">
+                    <img style="height: 10vh;" src="./utils/images/acciona.svg" alt="">
+                </div>
+                <div class="item" style="min-width: 10vw;">
+                    <img style="height: 10vh;" src="./utils/images/ferrero-rocher.png" alt="">
+                </div>
+                <div class="item" style="min-width: 9vw;">
+                    <img style="height: 12vh;" src="./utils/images/lafabril.png" alt="">
+                </div>
+                <div class="item" style="min-width: 15vw;">
+                    <img style="height: 25vh;" src="./utils/images/cnel.jpg" alt="">
+                </div>
+                <div class="item" style="min-width: 9vw;">
+                    <img style="height: 15vh;" src="./utils/images/alcaldia-cuenca.png" alt="">
+                </div>
+                <div class="item" style="min-width: 13vw;">
+                    <img style="height: 12vh;" src="./utils/images/eeq.png" alt="">
+                </div>
+                <div class="item" style="min-width: 20vw;">
+                    <img style="height: 6.5vh;" src="./utils/images/canala.svg" alt="">
+                </div>
+            </div>
+            <div class="detail" style="--time: 12.5s; transform: translateX(-117vw);">
+                <div class="item" style="min-width: 27vw;">
+                    <img style="height: 10vh;" src="./utils/images/eec.png" alt="">
+                </div>
+                <div class="item" style="min-width: 14vw;">
+                    <img style="height: 10vh;" src="./utils/images/acciona.svg" alt="">
+                </div>
+                <div class="item" style="min-width: 10vw;">
+                    <img style="height: 10vh;" src="./utils/images/ferrero-rocher.png" alt="">
+                </div>
+                <div class="item" style="min-width: 9vw;">
+                    <img style="height: 12vh;" src="./utils/images/lafabril.png" alt="">
+                </div>
+                <div class="item" style="min-width: 15vw;">
+                    <img style="height: 25vh;" src="./utils/images/cnel.jpg" alt="">
+                </div>
+                <div class="item" style="min-width: 9vw;">
+                    <img style="height: 15vh;" src="./utils/images/alcaldia-cuenca.png" alt="">
+                </div>
+                <div class="item" style="min-width: 13vw;">
+                    <img style="height: 12vh;" src="./utils/images/eeq.png" alt="">
+                </div>
+                <div class="item" style="min-width: 20vw;">
+                    <img style="height: 6.5vh;" src="./utils/images/canala.svg" alt="">
+                </div>
+            </div>
         </div>
+    </section>
+    <section class="contacto">
+
     </section>
 </body>
 
@@ -572,6 +617,7 @@
         bottom: -7vh;
         left: 0;
         width: -webkit-fill-available;
+        width: -moz-fill-available;
         padding: 3vh 3vw;
         text-align: right;
         font-size: 2.5vh;
@@ -616,6 +662,11 @@
     .nosotros .detail .item {
         width: 35%;
         border: 0.2vw solid white;
+        transition: transform 0.2s ease;
+    }
+
+    .nosotros .detail .item:hover {
+        transform: translateY(-2vh);
     }
 
     .nosotros .detail .item .image {
@@ -856,7 +907,6 @@
 
     .clientes {
         width: 100vw;
-        min-height: 100vh;
         background-color: var(--white);
         display: flex;
         flex-direction: column;
@@ -870,25 +920,40 @@
         font-weight: 900;
     }
 
-    .clientes .detail {
-        width: 80%;
+    .clientes .detail-container {
+        display: flex;
+        position: relative;
+        width: 90%;
         height: 15vh;
         overflow: hidden;
-        
-    }
-
-    .clientes .detail ul {
-        padding: 0;
-        margin: 0;
-        display: flex;
     }
     
-    .clientes .detail ul li {
-        list-style: none;
+    .clientes .detail-container .detail {
+        position: absolute;
+        width: fit-content;
+        height: 15vh;
+        overflow: hidden;
+        display: flex;
+        animation: clients-move 25s linear infinite;
+        animation-delay: var(--time);
+        left: 0;
+    }
+
+    .clientes .detail .item {
+        width: fit-content;
         height: 15vh;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .contacto {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     @media (min-width: 40rem) {
@@ -941,13 +1006,13 @@
         }
     }
 
-    @keyframes move-c-1 {
+    @keyframes clients-move {
         0% {
-            transform: translateX(0);
+            transform: translateX(-117vw);
         }
 
         100% {
-            transform: translateX(80vw);
+            transform: translateX(120vw);
         }
     }
 </style>
